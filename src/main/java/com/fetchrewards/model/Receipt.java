@@ -52,5 +52,10 @@ public class Receipt {
 	public void setItems(List<Items> items) {
 		this.items = items;
 	}
+	@Override
+	public String toString() {
+		return "Receipt [retailer=" + retailer + ", purchaseDate=" + purchaseDate + ", purchaseTime=" + purchaseTime
+				+ ", items=" + items + ", total=" + total + "]";
+	}
 	
 }
