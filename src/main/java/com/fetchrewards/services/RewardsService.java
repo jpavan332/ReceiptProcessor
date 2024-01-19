@@ -19,9 +19,7 @@ public class RewardsService {
 	private Map<String,	Receipt> receiptMap = new HashMap<>();
 	
 	public String generateId(Receipt receipt) {
-		// TODO Auto-generated method stub
 		String receiptId = UUID.randomUUID().toString();
-		
 		receiptMap.put(receiptId, receipt);
 		return receiptId;
 	}
@@ -36,8 +34,10 @@ public class RewardsService {
 		return points;
 	}
 
+	
+	
 	private int calculatePoints(Receipt receipt) {
-		// TODO Auto-generated method stub
+	
 		int points = 0;
 		
 		//1. One point for every alphanumeric character in the retailer name.
