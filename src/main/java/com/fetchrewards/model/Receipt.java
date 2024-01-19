@@ -1,18 +1,25 @@
 package com.fetchrewards.model;
 
+import java.util.List;
+
 public class Receipt {
 
 	private String retailer;
 	private String purchaseDate;
 	private String purchaseTime;
-	private Items items[];
+	private List<Items> items;
 	
-	public Receipt(String retailer, String purchaseDate, String purchaseTime, Items[] items) {
+	
+	public Receipt(String retailer, String purchaseDate, String purchaseTime, List<Items> items) {
 		super();
 		this.retailer = retailer;
 		this.purchaseDate = purchaseDate;
 		this.purchaseTime = purchaseTime;
 		this.items = items;
+	}
+	public Receipt() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	public String getRetailer() {
 		return retailer;
@@ -23,7 +30,7 @@ public class Receipt {
 	public String getPurchaseTime() {
 		return purchaseTime;
 	}
-	public Items[] getItems() {
+	public List<Items> getItems() {
 		return items;
 	}
 	public void setRetailer(String retailer) {
@@ -35,7 +42,7 @@ public class Receipt {
 	public void setPurchaseTime(String purchaseTime) {
 		this.purchaseTime = purchaseTime;
 	}
-	public void setItems(Items[] items) {
+	public void setItems(List<Items> items) {
 		this.items = items;
 	}
 	
