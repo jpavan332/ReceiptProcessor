@@ -29,6 +29,12 @@ public class RewardsController {
 		return ResponseEntity.ok(Map.of("id",receiptId));
 	}
 	
-	
+	@GetMapping("/{id}/points")
+	public ResponseEntity<?> getPoints(@PathVariable String id)
+	{
+		int points = rewardsService.getPoints(id);
+		return ResponseEntity.ok(Map.of("points",points));
+	}
+
 
 }

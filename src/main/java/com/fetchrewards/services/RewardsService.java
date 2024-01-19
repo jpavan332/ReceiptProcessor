@@ -21,6 +21,22 @@ public class RewardsService {
 		return receiptId;
 	}
 
+	public int getPoints(String id) {
+		Receipt receipt = receiptMap.get(id);
+		if(receipt == null)
+			return 0;
+		int points = calculatePoints(receipt);
+		return 0;
+	}
+
+	private int calculatePoints(Receipt receipt) {
+		// TODO Auto-generated method stub
+		int points = 0;
+		points+= receipt.getRetailer().chars().filter(Character::isLetterOrDigit).count();
+		
+		return 0;
+	}
+
 	
 
 }
