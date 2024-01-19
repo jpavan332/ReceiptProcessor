@@ -33,7 +33,7 @@ public class RewardsController {
 	public ResponseEntity<?> getPoints(@PathVariable String id)
 	{
 		int points = rewardsService.getPoints(id);
-		System.out.println("points == "+points);
+//		System.out.println("points == "+points);
 		return ResponseEntity.ok(Map.of("points",points));
 	}
 

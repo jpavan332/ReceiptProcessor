@@ -21,15 +21,15 @@ public class RewardsService {
 	public String generateId(Receipt receipt) {
 		// TODO Auto-generated method stub
 		String receiptId = UUID.randomUUID().toString();
-		System.out.println("receipt=="+receipt);
+		
 		receiptMap.put(receiptId, receipt);
 		return receiptId;
 	}
 
 	public int getPoints(String id) {
-		System.out.println("id===="+id);
+		
 		Receipt receipt = receiptMap.get(id);
-		System.out.println("receipt=="+receipt);
+		
 		if(receipt == null)
 			return 0;
 		int points = calculatePoints(receipt);
@@ -45,7 +45,7 @@ public class RewardsService {
 		
 		//2.  50 points if the total is a round dollar amount with no cents.
 		double total = Double.parseDouble(receipt.getTotal());
-		points+= (total == Math.round(total))?50:0;
+		points+= (total == Math.ceil(total))?50:0;
 		
 		//3. 25 points if the total is a multiple of 0.25.
 		points+= (total%0.25 == 0)?25:0;
@@ -87,7 +87,7 @@ public class RewardsService {
 		{
 			points+=10;
 		}
-		System.out.println("time points === "+points);
+//		System.out.println("time points === "+points);
 		return points;
 	}
 
