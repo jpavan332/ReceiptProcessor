@@ -1,7 +1,7 @@
 # RecieptProcessor
 
 **Language:**
-  Spring Boot using  Java
+  pring Boot using  Java
   
 ## Steps to run the application:
 
